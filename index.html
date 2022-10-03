@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ingredientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link href="estilosCirc.css" rel="stylesheet" type="text/css"/>
+        <link href="css/onsenui.css" rel="stylesheet" type="text/css">
+        <link href="css/onsen-css-components.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+    <ons-splitter>
+        <!--        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+                    <ons-page>
+                        <ons-list>
+                            <ons-list-item onclick="fn.load('busqueda.html')" tappable>
+                                Login
+                            </ons-list-item>
+        
+        
+                        </ons-list>
+                    </ons-page>
+                </ons-splitter-side>-->
+        <ons-splitter-content id="content" page="login.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <template id="login.html">
+        <ons-page id="login">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                Login
+                            </div>
+                        </ons-toolbar>-->
+            <div class="pagina">
+                <img src="img/logo.svg" class="logo">
+                <h1>«Cualquiera puede cocinar»</h1>
+                <h2>-Auguste Gusteau</h2>
+                <input type="text" id="txtUsuario" placeholder="Usuario">
+                <input type="password" id="txtContrasenia" placeholder="Contraseña">
+                <div id="recuerdo">
+                    <label for="recordar" class="checkbox checkbox--material">
+                        <input type="checkbox" class="checkbox__input checkbox--material__input" id="recordar">
+                        <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                        Recordar contraseña
+                      </label>
+                    <!-- <input type="checkbox" id="recordar">
+                    <label for="recordar">Recordarme</label> -->
+                </div>
+                <input type="button" value="Iniciar Sesión" id="btnIngresar">
+                <input type="button" id="crearUsuario" value="Crear una cuenta">
+                <div id="pMensaje">
+                        <svg class="progress-circular progress-circular--indeterminate">
+                            <circle class="progress-circular__background"/>
+                            <circle class="progress-circular__primary progress-circular--indeterminate__primary"/>
+                            <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
+                          </svg>
+                </div>
+                <p id="loginIncorrecto"></p>
+            </div>
+        </ons-page>
+    </template>
+    <template id="registro.html">
+        <ons-page id="registro">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                registrarse
+                            </div>
+                        </ons-toolbar>-->
+                        <img src="img/back.svg" class="atras">
+            <div class="pagina">
+                <h1>Crear Usuario</h1>
+                <label for="txtNombreNuevo">Nombre</label><br>
+                <input type="text" id="txtNombreNuevo"><br>
+                <label for="txtUsuarioNuevo">Usuario</label><br>
+                <input type="text" id="txtUsuarioNuevo"><br>
+                <label for="txtContraseniaNuevo">Contraseña</label><br>
+                <input type="password" id="txtContraseniaNuevo"> <br>
+                <!-- <label for="fileFotoUser">Foto</label><br>
+                <input type="file" id="fileFotoUser"><br> -->
+                <label for="txtContraseniaNuevo">Subir foto de perfil</label><br>
+                <div class="button-wrapper">
+                    <span class="label">
+                      Seleccionar archivo
+                    </span>
+                    
+                      <input type="file" name="upload" id="fileFotoUser" class="upload-box" placeholder="Seleccionar archivo">
+                    
+                  </div>
+                  <input type="button" id="btnAgregarUsuario" value="Agregar">
+            </div>
+            
+            
+            <!-- <p id="pMensaje2"></p> -->
+
+        </ons-page>
+    </template>
+    HTML
+<template id="perfil.html">
+        <ons-page id="perfil">
+            <img src="img/back.svg" class="atras">
+            <div id="botonesPerfil">
+                <img src="img/nuevo.svg" id="btnAgregarRecetas">
+                <img src="img/config.svg" class="config">
+            </div>
+            <div class="pagina">
+                <div id="fotoPerfilUsuario">
+
+                </div>
+                <h1></h1>
+                <h4></h4>
+                <div id="misRecetas">
+                    <div id="favoritas">
+                        <h3></h3>
+                        <p>favoritas</p>
+                    </div>
+                    <div id="hechas">
+                        <h3></h3>
+                        <p>hechas</p>
+                    </div>
+                    <div id="guardadas">
+                        <h3></h3>
+                        <p>guardadas</p>
+                    </div>
+                </div>
+                <div id="botonesRecetas">
+                    <input type="button" id="favorita" value="Favoritas" autofocus="true">
+                    <input type="button" id="historial" value="Historial">
+                    <input type="button" id="masTarde" value="Guardadas">
+                </div>
+                    <div id="resultadosPerfil"></div>
+
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera1.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario2.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+    <template id="configuracion.html">
+        <ons-page id="configuracion">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                registrarse
+                            </div>
+                        </ons-toolbar>-->
+            <img src="img/back.svg" class="atras">
+            <div class="pagina">
+                <div id="configUsuario">
+                    <h1>Configuración</h1>
+                <label for="txtNombreEditar">Editar nombre</label>
+                <input type="text" id="txtNombreEditar"><br>
+                <label for="txtContraseniaEditar">Editar contraseña</label>
+                <input type="password" id="txtContraseniaEditar"><br>
+                <input type="button" value="Guardar" id="guardarDatos">
+                <input type="button" value="Eliminar cuenta" id="eliminarDatos">
+                <p id="datosEditados"></p>
+                    <div><input type="button" style="display: none;" id="btnVolver"><label for="btnVolver" id="btnVolver">Cerrar sesión</label></div>
+                </div>
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera1.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario2.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+
+    <template id="agregarRecetas.html">
+        <ons-page id="agregarRecetas">
+            <img src="img/back.svg" class="atras">
+            <div class="pagina">
+                <!--        <div>Recetas</div>
+                        <ul id="listaRecetas"></ul>
+                        <hr>-->
+                <h1>Ingresar receta</h1>
+                <label for="txtNombre">Nombre</label>
+                <input type="text" id="txtNombre"><br>
+                <label for="sClasificacion">Clasificación</label>
+                <select id="sClasificacion">
+                    <option value="Salado">Salado</option>
+                    <option value="Dulce">Dulce</option>
+                    <option value="Agridulce">Agridulce</option>
+                </select><br>
+                <label for="txtPreparacion">Preparacion</label>
+                <p class="pIngredientes">Para separar párrafos reliza un doble salto de linea.</p>
+                <textarea id="txtPreparacion"></textarea><br>
+                <label for="txtTiempo">Tiempo</label>
+                <input type="number" id="txtTiempo"><br>
+                <label for="sHabilidad">Habilidad</label>
+                <select id="sHabilidad"><option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                </select><br>
+                <label for="sGluten">Gluten</label>
+                <select id="sGluten">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br>
+                <label for="sAzucar">Azúcar</label>
+                <select id="sAzucar">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br>
+                <label for="sSal">Sal</label>
+                <select id="sSal">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br>
+                <label for="sVegetariano">Vegetariano</label>
+                <select id="sVegetariano">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br>
+                <label class="etiqueta" for="sVegano">Vegano</label>
+                <select id="sVegano">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br>
+                <label for="txtIngredientes">Ingredientes</label>
+                <p class="pIngredientes">Debes ingresar los ingredientes en singular, separados por una <strong>" , "</strong> (menos el ultimo ingrediente).</p>
+                <textarea id="txtIngredientes" placeholder="Sal,Aceite de oliva,Agua"></textarea><br>
+                <label for="txtIngredientes2">Ingredientes</label>
+                <p class="pIngredientes">Debes ingresar los ingredientes y sus cantidades, separados por un<strong> " ; "</strong> (menos el ultimo ingrediente).</p>
+                <textarea id="txtIngredientes2" placeholder="1 pizca de sal;100ml de aceite de oliva;1/2 taza de agua"></textarea><br>
+                <!-- <label for="fileFoto">Foto</label><br>
+                <input type="file" id="fileFoto"><br> -->
+                <div class="button-wrapper">
+                    <span class="label">
+                      Seleccionar archivo
+                    </span>
+                    
+                      <input type="file" name="upload" id="fileFoto" class="upload-box" placeholder="Seleccionar archivo">
+                    
+                  </div>
+                <input type="button" id="btnAgregar" value="Agregar">
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera1.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario2.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+
+    <template id="heladera.html">
+        <ons-page id="heladera">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                Bienvenido
+                            </div>
+                        </ons-toolbar>-->
+            <div class="pagina">
+                <img src="img/logo.svg" class="logo">
+                <div id="dBuscar"></div>
+                <div id="ilHeladera"><h6>Tu heladera y despensa están vacías</h6><img src="img/vacio.svg"><p>Empieza a agregar ingredientes</p></div>
+                <div id="dIngredientes">
+                    
+                </div>
+
+                <!--<div id="resultadosComparar"></div>-->
+                <input type="button" id="siguiente" value="Siguiente">
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera2.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario1.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+    <template id="filtros.html">
+        <ons-page id="filtros">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                Bienvenido
+                            </div>
+                        </ons-toolbar>-->
+            <img src="img/back.svg" class="atras">
+            <div class="pagina">
+
+                <h1>Filtros</h1>
+                <div id="dFiltros">
+                    <h2>Tiempo</h2>
+                    <ul class="ks-cboxtags" id="rango">
+                        <div class="range range--material">
+                            <input type="range" class="range__input range--material__input" min="0" max="500" value="500" id="tiempo">
+                            <p id="mostrarValor"><b>500</b><span> min</span></p>
+                        </div>
+                    </ul>
+                    <h2>Clasificación</h2>
+                    <ul class="ks-cboxtags">
+                        <li>
+                            <input class="claFiltros" type="checkbox" id="fSalado" value="Salado">
+                            <label for="fSalado" id="lSalado">Salado</label>
+                        </li>
+                        <li>
+                            <input class="claFiltros" type="checkbox" id="fDulce" value="Dulce">
+                            <label for="fDulce" id="lDulce">Dulce</label>
+                        </li>
+                        <li>
+                            <input class="claFiltros" type="checkbox" id="fAgridulce" value="Agridulce">
+                            <label for="fAgridulce" id="lAgridulce">Agridulce</label>
+                        </li>
+                    </ul>
+                    <h2>Especificaciones</h2>
+                    <ul class="ks-cboxtags">
+                        <li>
+                            <input type="checkbox" id="sinGluten" value="gluten">
+                            <label for="sinGluten" id="lSinGluten">Sin gluten</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="sinAzucar" value="azucar">
+                            <label for="sinAzucar">Sin azúcar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="sinSal" value="sal">
+                            <label for="sinSal">Sin sal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="vegetariano" value="vegetariano">
+                            <label for="vegetariano">Vegetariano</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="vegano" value="vegano">
+                            <label for="vegano">Vegano</label>
+                        </li>
+    
+                    </ul>
+                </div>
+
+                <input type="button" id="comparar" value="Buscar">
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera2.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario1.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+    <template id="resultados.html">
+        <ons-page id="resultados">
+            <!--            <ons-toolbar>
+                            <div class="left">
+                                <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                </ons-toolbar-button>
+                            </div>
+                            <div class="center">
+                                Bienvenido
+                            </div>
+                        </ons-toolbar>-->
+            <img src="img/back.svg" class="atras">
+            <div class="pagina">
+                <h1>Resultados</h1>
+                <div id="ilResultados"><h6>No hay resultados para tu búsqueda</h6><img src="img/noResultados.svg"><p>Prueba agregar más ingredientes<br>o quitar algunos filtros</p></div>
+                <div id="resultadosComparar"></div>
+            </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera2.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario1.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+    <template id="detalle.html">
+        <ons-page id="detalle">
+            <img src="img/back.svg" class="atras">
+            <div id="detalleImg">
+                <div id="circuloPorcentaje"></div>
+            </div>
+                <div id="detalleReceta">
+                    <div class="fav">
+                        <ul class="ks-cboxtags">
+
+                        </ul>
+                    </div>
+                    <h2></h2>
+                    <p></p>
+                    <div id="fila1"></div>
+                    <div id="fila2"></div>
+                    <div id="fila3">
+                        <h4>Ingredientes</h4>
+                        <ul id="ingredientes"></ul>
+                        <h4>Preparación</h4>
+                        <div id="preparacion"></div>
+                    </div>
+                </div>
+            <div class="tabbar tabbar--bottom tabbar--material">
+                <label class="tabbar__item tabbar--material__item heladera">
+                    <input type="radio" name="tabbar-material-b" checked="checked">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/heladera1.svg">
+                    </button>
+                </label>
+
+
+                <label class="tabbar__item tabbar--material__item perfil">
+                    <input type="radio" name="tabbar-material-b">
+                    <button class="tabbar__button tabbar--material__button">
+                        <img src="img/usuario1.svg">
+                    </button>
+                </label>
+            </div>
+        </ons-page>
+    </template>
+
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/onsenui.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="js/codigo.js" type="text/javascript"></script>
+    <!--<script src="js/editarUsuario.js" type="text/javascript"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</body>
+</html>

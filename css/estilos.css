@@ -1,0 +1,972 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    font-variant-numeric: lining-nums;
+}
+
+.page__background, .page__content{
+    background-color: #f2f2f2;
+}
+
+h1,h2,h3,h4,li,p,#recuerdo label{
+    color: #4d4d4d;
+    font-family: 'Raleway', sans-serif;
+}
+
+.atras{
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    z-index: 1000;
+    height: 30px;
+}
+
+.tabbar--material__button:after{
+    display: none;
+}
+
+.tabbar__button img{
+    height: 20px;
+    margin-top: 15px;
+}
+/*.atras .back-button__icon{
+    fill: #ff285f;
+}*/
+
+input[type="button"]{
+    background-color: #ff285f;
+    color: #f2f2f2;
+    border-radius: 30px;
+    border: none;
+    padding: 2px 5px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+}
+
+input[type="text"],input[type="password"]{
+    font-family: 'Raleway';
+    background-color: transparent;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #ff285f;
+    box-sizing: border-box;
+    padding-left: 20px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    display: block;
+    margin: 30px auto;
+    max-width: 50%;
+
+
+}
+
+.checkbox--material__checkmark:before{
+    border: 2px solid #ff285f;
+}
+
+:checked+.checkbox--material__checkmark:before{
+    border: 2px solid #ff285f;
+    background-color: #ff285f;
+}
+
+#recuerdo label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox--material__checkmark{
+    width: 25px;
+}
+
+#login h1{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+#login h2{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 40px 0;
+}
+
+/*#login input[type="text"]{
+    height: 45px;
+    margin-bottom: 20px;
+}*/
+
+#btnIngresar{
+    display: block;
+    margin: 0 auto;
+    font-size: 22px;
+    padding: 7px 40px;
+    margin-top: 40px;
+}
+
+#configUsuario input[type="text"], #configUsuario input[type="password"]{
+    margin-top: 20px;
+}
+
+#siguiente{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding: 7px 40px;
+}
+
+#comparar{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 22px;
+    padding: 7px 40px;
+}
+
+#registro #btnAgregarUsuario{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding: 7px 40px;
+}
+
+#recuerdo{
+margin-top: 10px;
+}
+
+#agregarRecetas select{
+    font-family: 'Raleway';
+    background-color: transparent;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #ff285f;
+    padding: 2px 15px;
+    box-sizing: border-box;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+input[type="number"]{
+    font-family: 'Raleway';
+    background-color: transparent;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #ff285f;
+    padding: 2px 15px;
+    box-sizing: border-box;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+#registro input{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#agregarRecetas input[type="file"]{
+    background-color: #ff285f;
+    color: #f2f2f2;
+    border-radius: 30px;
+    border: none;
+    padding: 2px 15px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.44);
+    -moz-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.44);
+    box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.44);
+}
+
+#agregarRecetas textArea{
+    font-family: 'Raleway';
+    background-color: transparent;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ff285f;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    padding: 2px 15px;
+    min-height: 120px;
+    resize: vertical;
+    margin-bottom: 20px;
+    line-height: 36px;
+}
+
+#agregarRecetas .pIngredientes{
+    width: 90%;
+    margin-left: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+.pagina label{
+    margin-left: 15px;
+}
+
+#agregarRecetas label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#crearUsuario{
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    color: #ff285f;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: none;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.page__content h4{
+    font-family: 'Raleway', sans-serif;
+}
+
+#dIngredientes{
+    overflow: scroll;
+    padding: 0 25px;
+    max-height: 47vh;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    position: relative;
+    padding: 10px 1em 10px .4em;
+    background-color: #f2f2f2;
+}
+
+#dIngredientes div{
+    clear: both;
+    margin: 10px 0;
+}
+
+input.eliminar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-family: 'Raleway', sans-serif;
+    float: right;
+    box-shadow: none;
+}
+
+#btnAgregar, #guardarDatos{
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding: 7px 40px;
+}
+
+#btnAgregar{
+    position: relative;
+    margin: 60px auto 0;
+}
+
+#guardarDatos{
+    position: relative;
+    margin: 70px auto 0;
+}
+
+#resultados .receta, #perfil .receta {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 25px;
+  height: 175px;
+  position: relative;
+  display: inline-block;
+}
+
+#resultados h1, #agregarRecetas h1, #filtros h1, #registro h1, #configUsuario h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-left: 7px;
+    font-size: 28px;
+    margin-top: 65px;
+}
+
+#filtros h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-left: 7px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#resultados .imgReceta, #perfil .imgReceta{
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+}
+
+#resultados .imgReceta img, #perfil .imgReceta img{
+    height: 110%;
+}
+
+#resultados .mascara, #perfil .mascara{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.65), transparent 50%);
+    border-radius: 10px;
+}
+/*#resultados .imgReceta{
+  width: 48%;
+  margin: 1%;
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#resultados .imgReceta img{
+    height: 100%;
+}
+
+#resultados .mascara{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.5), transparent);
+}*/
+
+#resultados .ui-widget.ui-widget-content, #perfil .ui-widget.ui-widget-content{
+    /*left: 4%;*/
+    position: absolute;
+    bottom: -15px;
+    width: 95%;
+    height: 4px;
+}
+
+#resultados .ui-widget-header, #perfil .ui-widget-header{
+    background-color: #ff285f;
+}
+
+#resultados h2, #perfil h2{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 25px;
+    width: max-content;
+}
+
+.mascaraTiempo, .mascaraHabilidad{
+    color: #f2f2f2;
+    position: absolute;
+    
+}
+
+.mascaraTiempo{
+    left: 10px;
+}
+
+.mascaraTiempo strong{
+    font-weight: bold;
+}
+
+.mascaraHabilidad{
+    right: 15px;
+    font-weight: bold;
+}
+
+.pagina{
+    padding:10px;
+    margin-bottom: 50px;/*para que el fixed no tape contenido que queda abajo (resultados)*/
+}
+
+#heladera .pagina{
+    position: relative;
+    padding:10px;
+    margin-bottom: 50px;
+    height: 85%;
+}
+
+/*lowbar*/
+div.tabbar{
+    position: fixed;
+    z-index: 999;
+}
+
+/*autocomplete ingredientes*/
+#heladera .ui-autocomplete {
+    max-height: 50vh;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+html .ui-autocomplete {
+    max-height: 150px;
+    overflow: scroll;
+  }
+
+/*checkboxes especiales*/
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+ul.ks-cboxtags li{
+  display: inline;
+}
+ul.ks-cboxtags li label{
+    display: inline-block;
+   background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "\f067";
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+}
+
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+/*    height: 30px;
+    width: 30px;*/
+    /*position: relative;*/
+    cursor: pointer;
+}
+
+#detalle ul.ks-cboxtags li label {
+    /*padding: 8px 12px;*/
+    height: 35px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid #ff285f;
+    background-color: transparent;
+    color: #ff285f;
+    transition: all .2s;
+}
+
+#detalleReceta ul.ks-cboxtags li input[type="checkbox"]:checked + label{
+    border: 2px solid #ff285f;
+    background-color: #ff285f;
+    color: #f2f2f2;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+/*ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+  border: 2px solid #e9a1ff;
+}*/
+
+/*pronando los de historial*/
+ul.ks-cboxtags li.rLate label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100;
+    font-size: 16px;
+    padding: 2px 6px 2px 2px;
+    content: "\f02e";
+    transition: transform .3s ease-in-out;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+ul.ks-cboxtags li.rLate input[type="checkbox"]:checked + label::before {
+    content: "\f02e";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+ul.ks-cboxtags li.rFav label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100;
+    font-size: 16px;
+    padding: 2px 6px 2px 2px;
+    content: "\f004";
+    transition: transform .5s ease-in-out;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+ul.ks-cboxtags li.rFav input[type="checkbox"]:checked + label::before {
+    content: "\f004";
+    transform: rotate(-360deg);
+    transition: transform .5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    font-weight: 900;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+ul.ks-cboxtags li.rHist label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    padding: 2px 6px 2px 2px;
+    content: "\f00c";
+    transition: transform .3s ease-in-out;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+ul.ks-cboxtags li.rHist input[type="checkbox"]:checked + label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+/*estrellas*/
+.rate {
+    border: 1px solid #cccccc;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+/*    top:-9999px;*/
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color: pink;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ff285f;    
+}
+/*.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #ffffff;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #ffffff;
+}*/
+
+
+
+
+
+/* ESTILOS AMPLIACION */
+
+.page__content{
+    overflow-x: hidden;
+}
+
+#detalleImg{
+    height: 260px;
+}
+
+#detalleImg img{
+    width: 130%;
+}
+
+#detalleMascara{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 240px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.5), transparent 60%);
+}
+
+#detalleReceta h2{
+    margin-top: 60px;
+    margin-right: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.fav{
+    float: right;
+    margin: 0px 8px;
+}
+
+#detalleReceta{
+    padding-top: 15px;
+    padding-right: 15px;
+    background-color: #f2f2f2;
+    padding-left: 25px;
+    padding-right: 30px;
+    border-radius: 40px 40px 0 0;
+    z-index: 999;
+    height: auto;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.fav .ks-cboxtags li{
+    margin-left: 15px;
+}
+
+.fav .ks-cboxtags li label{
+    display: inline-block;
+   background-color: transparent;
+    border: 2px solid #808080;
+    color: #808080;
+    border-radius: 50%;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+#fila1, #fila2{
+    display: flex;
+    margin-top: -15px;
+    width: max-content;
+}
+
+#fila1 p{
+    margin-right: 20px;
+    color: #808080;
+}
+
+#fila2 p{
+    margin-right: 10px;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+#fila1 img{
+    width: 13px;
+    margin-right: 5px;
+}
+
+#fila1 #imgPrueba{
+    margin-right: 0px;
+}
+
+#pMensaje{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.progress-circular__primary{
+    stroke: #ff285f;
+}
+
+#fila3{
+    margin-top: 30px;
+}
+
+#ingredientes{
+    padding: 0;
+    list-style: none;
+}
+
+#ingredientes li{
+    margin-bottom: 10px;
+}
+
+#preparacion{
+    line-height: 28px;
+}
+
+
+
+/* Estilos Ilustraciones */
+
+#ilHeladera, #ilResultados{
+    text-align: center;
+}
+
+#ilHeladera h6, #ilResultados h6{
+    font-size: 18px;
+    color: #808080;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#ilHeladera p, #ilResultados p{
+    color: #808080;
+}
+
+#ilHeladera img, #ilResultados img{
+    width: 35%;
+    margin: 20px 0;
+}
+
+#ilResultados{
+    margin-top: 85px;
+}
+
+
+
+/* Perfil */
+
+#perfil #botonesPerfil{
+    position: absolute;
+    top: 30px;
+    right: 25px;
+}
+
+#perfil #botonesPerfil img{
+    height: 30px;
+    margin-left: 20px;
+}
+
+#perfil #fotoPerfilUsuario{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 90px auto 0;
+    border: 3px solid #ff285f;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+}
+
+#perfil #botonesRecetas input[type="button"]:focus {
+    background-color: #ff285f; 
+    color: white; 
+    border: 1px solid #ff285f;
+  }
+
+#perfil #fotoPerfilUsuario img{
+    height: 100%;
+}
+
+#perfil h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#perfil h4{
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#perfil #misRecetas #favoritas, #perfil #misRecetas #hechas, #perfil #misRecetas #guardadas{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+}
+
+#perfil #misRecetas #favoritas h3, #perfil #misRecetas #hechas h3, #perfil #misRecetas #guardadas h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+#perfil #misRecetas #favoritas p, #perfil #misRecetas #hechas p, #perfil #misRecetas #guardadas p{
+    margin: 0;
+}
+
+#misRecetas{
+    margin-bottom: 20px;
+}
+
+#botonesRecetas{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+#perfil #botonesRecetas input[type="button"]{
+    font-family: 'Raleway', sans-serif;
+    color: #4d4d4d;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #4d4d4d;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    width: 32%;
+    margin: 10px 0;
+} 
+
+/* Estilos input file */
+
+.button-wrapper {
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .button-wrapper span.label {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 100%;
+    border: #ff285f 1px solid;
+    color: #ff285f;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size:12px;
+    border-radius: 35px;
+  }
+  
+  #fileFoto, #fileFotoUser {
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 50px;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+  }
+
+  #registro .button-wrapper{
+    margin-top: 15px;
+  }
+
+  #login .logo{
+      margin-top: 80px;
+  }
+
+  #configUsuario div{
+      text-align: center;
+  }
+
+  #configUsuario #btnVolver{
+    margin: 0;
+    color: #ff285f;
+    font-weight: 600;
+  }
+
+  .red::placeholder{
+    color:#ff285f;
+}
+
+.range--material{
+    background-image: linear-gradient(#ff285f,#ff285f);
+}
+
+.range{
+    background-size: 100% 3px;
+}
+
+.range--material{
+    width: 250px;
+}
+
+#tiempo::-webkit-slider-thumb{
+    background: #f2f2f2;
+    border: 2px solid #ff285f;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#dFiltros{
+    margin-left: 20px;
+}
+
+#mostrarValor{
+    margin: 0;
+}
